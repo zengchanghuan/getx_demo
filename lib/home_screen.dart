@@ -13,6 +13,31 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height * 1;
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('getx demo'),
+      ),
+      body: Column(
+        children: [
+          Container(
+            color: Colors.red,
+            height: Get.height * .2,
+            width: Get.width * 0.8,
+            child: const Center(child: Text('center'),),
+          ),
+          Container(
+            color: Colors.green,
+            height: Get.height * .2,
+            width: Get.width * 0.8,
+
+            child: const Center(child: Text('center'),),
+          ),
+
+        ],
+      ),
+    );
+    /*
     return Scaffold(
       appBar: AppBar(
         title: const Text('getx demo'),
@@ -127,5 +152,6 @@ class _HomeScreenState extends State<HomeScreen> {
         },
       ),
     );
+    */
   }
 }

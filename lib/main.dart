@@ -20,12 +20,14 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.blue,
         // useMaterial3: true,
       ),
-      // home: const HomeScreen(),
+      home: const HomeScreen(),
+        /*
       getPages: [
         GetPage(name: '/', page: () => const HomeScreen()),
         GetPage(name: '/screenOne', page: () => ScreenOne()),
         GetPage(name: '/screenTwo', page: () => const ScreenTwo()),
       ],
+      */
     );
   }
 }
