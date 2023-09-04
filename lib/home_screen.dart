@@ -66,19 +66,25 @@ class _HomeScreenState extends State<HomeScreen> {
                       borderRadius: BorderRadius.circular(30),
                       color: Colors.red,
                     ),
-                    child: const Column(
+                    child:  Column(
                       children: [
                         ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.light_mode,
                           ),
-                          title: Text('light theme'),
+                          title: const Text('light theme'),
+                          onTap: (){
+                            Get.changeTheme(ThemeData.light());
+                          },
                         ),
                         ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.dark_mode,
                           ),
-                          title: Text('dark theme'),
+                          title: const Text('dark theme'),
+                          onTap: (){
+                            Get.changeTheme(ThemeData.dark());
+                          },
                         ),
                       ],
                     ),
