@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:get/utils.dart';
+import 'package:getx_demo/screen_one.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -16,6 +17,21 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Text('getx demo'),
       ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Center(child: TextButton(onPressed: () {
+            // Get.to(const ScreenOne(name: 'tristan',));
+            Get.toNamed('/screenOne',arguments: [
+              'tristan',
+              'May',
+            ]);
+          }, child: const Text('go to next page'))),
+        ],
+      ),
+      //Change Light and Dark zch
+      /*
       body: Column(
         children: [
           Card(
@@ -95,6 +111,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
+      */
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           /*
